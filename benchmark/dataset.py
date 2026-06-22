@@ -125,6 +125,7 @@ tags:
 - waybill
 - robotics
 - indory
+- synthetic
 license: other
 ---
 
@@ -137,6 +138,14 @@ evaluate the `control-server-detection` `/v1/waybill/scan` API. The service's
 internal Python package is still named `indory_ocr` for compatibility, but the
 public repository name is `control-server-detection`. The benchmark target is
 the delivery destination room/floor decision, not generic full-document OCR.
+
+## Data Provenance and Privacy
+
+All waybill images in this export are generated/synthetic benchmark images.
+They do not contain real customer names, real phone numbers, real addresses,
+real tracking numbers, service credentials, private network details, or robot
+runtime logs. Any waybill-style identifiers visible in the images are synthetic
+test text for OCR evaluation.
 
 ## Files
 
@@ -151,9 +160,9 @@ the delivery destination room/floor decision, not generic full-document OCR.
 - Samples: {summary.get("sample_count")}
 - Ground-truth samples: {summary.get("ground_truth_count")}
 - Split: `{summary.get("split")}`
-- Image size: 640x480 resized benchmark snapshot
+- Image size: 640x480 resized synthetic benchmark snapshot
 
-Review the license and visibility before publishing this dataset publicly.
+Review the dataset license before reusing or redistributing the images.
 """
 
 
